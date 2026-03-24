@@ -571,8 +571,8 @@ namespace AulaDiser.Proyecto.Datos
                     WHERE PA.ProductoID = A.IdProducto
                     FOR JSON PATH
                 ) AS atributosJSON
-                        FROM [VisionFerre].[pv].[producto] A
-                    INNER JOIN [VisionFerre].[dbo].[Categorias_CAT] B ON B.ID = A.categoriaID
+                        FROM [VisionFerreDB].[pv].[producto] A
+                    INNER JOIN [VisionFerreDB].[dbo].[Categorias_CAT] B ON B.ID = A.categoriaID
                     INNER JOIN[dbo].[Marca_CAT] C
                     ON A.marcaID = C.ID";
 
