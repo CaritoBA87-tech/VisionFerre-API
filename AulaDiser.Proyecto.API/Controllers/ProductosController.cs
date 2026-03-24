@@ -27,7 +27,13 @@ namespace AulaDiser.Proyecto.API.Controllers
         //La variable de tipo IConfiguration contiene información de todo el sistema, incluido lo que tenemos en appsetting.json
         public ProductosController (IConfiguration configuration/*, ComprehendService comprehendService*/, VisionService visionService, IAmazonS3 s3Client , IAsistenteIA bedrockService)
         {
-            _connectionString = configuration.GetConnectionString("AD.Conexion"); //Cadena de conexión que hemos declarado en appsetting.json
+            //_connectionString = configuration.GetConnectionString("AD.Conexion"); //Cadena de conexión que hemos declarado en appsetting.json
+
+            // Intenta leer 'DefaultConnection' (Railway) y si no, busca 'AD.Conexion' (Local)
+            _connectionString = configuration.GetConnectionString("DefaultConnection") // Busca ConnectionStrings:DefaultConnection
+                             ?? configuration["DefaultConnection"]                       // Busca una variable plana
+                             ?? configuration.GetConnectionString("AD.Conexion");        // Tu respaldo local
+
             //_comprehendService = comprehendService;
             _visionService = visionService;
             _s3Client = s3Client;

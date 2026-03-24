@@ -28,7 +28,12 @@ MapsterConfig.RegisterMappings();
 /*string connectionString = Environment.GetEnvironmentVariable("DATABASE_URL")
                          ?? builder.Configuration.GetConnectionString("AD.Conexion");*/
 
+/*string connectionString = builder.Configuration.GetConnectionString("DefaultConnection")
+                         ?? builder.Configuration.GetConnectionString("AD.Conexion");*/
+
 string connectionString = builder.Configuration.GetConnectionString("DefaultConnection")
+                         ?? builder.Configuration["ConnectionStrings:DefaultConnection"]
+                         ?? builder.Configuration["DefaultConnection"]
                          ?? builder.Configuration.GetConnectionString("AD.Conexion");
 
 //Esto le dice al API que cuando alguien pida ICompraRepository proporcione CompraRepository con la cadena de conexión en el constructor
