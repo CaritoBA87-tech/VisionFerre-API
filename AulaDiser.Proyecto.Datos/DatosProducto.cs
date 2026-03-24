@@ -25,7 +25,7 @@ namespace AulaDiser.Proyecto.Datos
         }
 
         //Agrega un nuevo producto
-        /*public void Almacenar(Producto infoProducto)
+        public void Almacenar(Producto infoProducto)
         {
             //Declara la conexión
             SqlConnection connection = new SqlConnection(cadenaConexion);
@@ -60,10 +60,10 @@ namespace AulaDiser.Proyecto.Datos
                 connection.Dispose();
             }
 
-        }*/
+        }
 
         //Obtiene la lista de productos de acuerdo al estatus
-        /*public List<Producto> Obtener(EstatusProducto estatus)
+        public List<Producto> Obtener(EstatusProducto estatus)
         {
             List<Producto> lst = new List<Producto>();
             SqlConnection connection = new SqlConnection(cadenaConexion);
@@ -106,10 +106,10 @@ namespace AulaDiser.Proyecto.Datos
 
             }
             return lst;
-        }*/
+        }
 
 
-        /*public List<Producto> ObtenerTodos(string idsCategorias = null)
+        public List<Producto> ObtenerTodos(string idsCategorias = null)
         {
             List<Producto> lst = new List<Producto>();
             SqlConnection connection = new SqlConnection(cadenaConexion);
@@ -157,9 +157,9 @@ namespace AulaDiser.Proyecto.Datos
 
             }
             return lst;
-        }*/
+        }
 
-        public List<Producto> ObtenerTodos(string idsCategorias = null)
+        /*public List<Producto> ObtenerTodos(string idsCategorias = null)
         {
             List<Producto> lst = new List<Producto>();
 
@@ -207,7 +207,7 @@ namespace AulaDiser.Proyecto.Datos
                 }
             }
             return lst;
-        }
+        }*/
 
         public List<AtributoProducto> ObtenerAtributos(List<Producto> productos)
         {
@@ -227,7 +227,7 @@ namespace AulaDiser.Proyecto.Datos
             return seguimiento;
         }
 
-        /*public List<Menu> ObtenerMenu()
+        public List<Menu> ObtenerMenu()
         {
             List<Menu> lst = new List<Menu>();
             SqlConnection connection = new SqlConnection(cadenaConexion);
@@ -269,9 +269,9 @@ namespace AulaDiser.Proyecto.Datos
 
             }
             return lst;
-        }*/
+        }
 
-        public List<Menu> ObtenerMenu()
+        /*public List<Menu> ObtenerMenu()
         {
             List<Menu> lst = new List<Menu>();
 
@@ -311,9 +311,9 @@ namespace AulaDiser.Proyecto.Datos
                 }
             }
             return lst;
-        }
+        }*/
 
-        /*public Producto ObtenerPorID(int productoId)
+        public Producto ObtenerPorID(int productoId)
         {
             Producto producto = new Producto();
             SqlConnection connection = new SqlConnection(cadenaConexion);
@@ -359,9 +359,9 @@ namespace AulaDiser.Proyecto.Datos
 
             }
             return producto;
-        }*/
+        }
 
-        public Producto ObtenerPorID(int productoId)
+        /*public Producto ObtenerPorID(int productoId)
         {
             Producto producto = new Producto();
 
@@ -409,19 +409,19 @@ namespace AulaDiser.Proyecto.Datos
                 }
             }
             return producto;
-        }
+        }*/
 
         //Obtener el producto con el id especificado
-        /*public Producto ObtenerUno(int idProducto)
+        public Producto ObtenerUno(int idProducto)
         {
             List<Producto> lst = new List<Producto>();
             lst = Obtener(EstatusProducto.Todos);
             Producto encontrado = lst.Find(x => x.IdProducto == idProducto);
             return encontrado;
-        }*/
+        }
 
         //Modifica un producto
-        /*public void Actualizar(Producto infoProducto)
+        public void Actualizar(Producto infoProducto)
         {
             //Declara la conexión
             SqlConnection connection = new SqlConnection(cadenaConexion);
@@ -457,10 +457,10 @@ namespace AulaDiser.Proyecto.Datos
                 connection.Dispose();
             }
 
-        }*/
+        }
 
         //Elimina un producto
-        /*public void Eliminar(Producto infoProducto)
+        public void Eliminar(Producto infoProducto)
         {
             //Declara la conexión
             SqlConnection connection = new SqlConnection(cadenaConexion);
@@ -495,7 +495,7 @@ namespace AulaDiser.Proyecto.Datos
                 connection.Dispose();
             }
 
-        }*/
+        }
 
         /*public List<Producto> BuscarProductosPorEtiquetas(List<string> etiquetas)
         {
@@ -542,7 +542,7 @@ namespace AulaDiser.Proyecto.Datos
             return productosEncontrados;
         }*/
 
-        /*public List<Producto> BuscarProductosPorEtiquetas(List<string> etiquetas)
+        public List<Producto> BuscarProductosPorEtiquetas(List<string> etiquetas)
         {
             List<Producto> productosEncontrados = new List<Producto>();
 
@@ -608,9 +608,9 @@ namespace AulaDiser.Proyecto.Datos
             }
 
             return productosEncontrados;
-        }*/
+        }
 
-        public List<Producto> BuscarProductosPorEtiquetas(List<string> etiquetas)
+        /*public List<Producto> BuscarProductosPorEtiquetas(List<string> etiquetas)
         {
             List<Producto> productosEncontrados = new List<Producto>();
 
@@ -697,6 +697,6 @@ namespace AulaDiser.Proyecto.Datos
             }
 
             return productosEncontrados;
-        }
+        }*/
     }
 }
